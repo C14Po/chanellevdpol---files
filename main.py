@@ -6,9 +6,8 @@ import shutil
 from zipfile import ZipFile
 
 path = os.path.dirname(__file__)
-folder = '\cache'
-new_folder = path + folder
-zip_path = path + '\data.zip'
+new_folder = os.path.join(path, 'cache')
+zip_path = os.path.join(path, 'data.zip')
 
 def clean_cache():
     if os.path.exists(new_folder):
