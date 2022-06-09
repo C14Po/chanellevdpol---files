@@ -41,7 +41,8 @@ def find_password(list):
                     password_return = i.removeprefix('password: ')
                     return password_return.rstrip('\n')
 
-clean_cache()
-cache_zip(zip_path, new_folder)
-cached_files()
-find_password(list)
+if __name__=='__main__':
+    clean_cache()
+    cache_zip(zip_path, new_folder)
+    cached_files()
+    find_password(list)
